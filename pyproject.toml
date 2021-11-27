@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "blockchain-book"
+version = "0.1.0"
+description = "Learning blockchain with Python"
+authors = ["witt3rd <donald@witt3rd.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+jupyter-book = "^0.12.1"
+matplotlib = "^3.5.0"
+ghp-import = "^2.0.2"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
