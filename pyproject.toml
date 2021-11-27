@@ -8,8 +8,6 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.9"
 jupyter-book = "^0.12.1"
-matplotlib = "^3.5.0"
-ghp-import = "^2.0.2"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.6.0"
