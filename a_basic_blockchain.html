@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notes &#8212; Learning Blockchain with Python</title>
+    <title>A Basic Blockchain &#8212; Learning Blockchain with Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -98,7 +98,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Notes
+   A Basic Blockchain
   </a>
  </li>
 </ul>
@@ -142,7 +142,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/notes.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/a_basic_blockchain.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -162,7 +162,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/witt3rd/learning-blockchain-with-python/issues/new?title=Issue%20on%20page%20%2Fnotes.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/witt3rd/learning-blockchain-with-python/issues/new?title=Issue%20on%20page%20%2Fa_basic_blockchain.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -183,7 +183,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/witt3rd/learning-blockchain-with-python/main?urlpath=tree/docs/notes.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/witt3rd/learning-blockchain-with-python/main?urlpath=tree/docs/a_basic_blockchain.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -200,6 +200,34 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hashing">
+   Hashing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blockchain">
+   Blockchain
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transactions">
+   Transactions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-and-chaining-blocks">
+   Creating and Chaining Blocks
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -208,8 +236,104 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="notes">
-<h1>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="a-basic-blockchain">
+<h1>A Basic Blockchain<a class="headerlink" href="#a-basic-blockchain" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/pYasYyjByKI">NeuralNine’s ‘Coding A Blockchain in Python’</a></p></li>
+</ul>
+<div class="section" id="hashing">
+<h2>Hashing<a class="headerlink" href="#hashing" title="Permalink to this headline">¶</a></h2>
+<p>TODO: Why is hashing so important?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="blockchain">
+<h2>Blockchain<a class="headerlink" href="#blockchain" title="Permalink to this headline">¶</a></h2>
+<p>TODO: What is a blockchain?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NeuralCoinBlock</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">previous_block_hash</span><span class="p">,</span> <span class="n">transaction_list</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">previous_block_hash</span> <span class="o">=</span> <span class="n">previous_block_hash</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transaction_list</span> <span class="o">=</span> <span class="n">transaction_list</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">block_data</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">transaction_list</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="n">previous_block_hash</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">block_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">block_data</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="transactions">
+<h2>Transactions<a class="headerlink" href="#transactions" title="Permalink to this headline">¶</a></h2>
+<p>TODO: What are transactions?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="s2">&quot;Anna sends 2 NC to Mike&quot;</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="s2">&quot;Bob sends 4.1 NC to Mike&quot;</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="s2">&quot;Mike sends 3.2 NC to Bob&quot;</span>
+<span class="n">t4</span> <span class="o">=</span> <span class="s2">&quot;Daniel sends 0.3 NC to Anna&quot;</span>
+<span class="n">t5</span> <span class="o">=</span> <span class="s2">&quot;Mike sends 1 NC to Charlie&quot;</span>
+<span class="n">t6</span> <span class="o">=</span> <span class="s2">&quot;Mike sends 5.4 NC to Daniel&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-and-chaining-blocks">
+<h2>Creating and Chaining Blocks<a class="headerlink" href="#creating-and-chaining-blocks" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">initial_block</span> <span class="o">=</span> <span class="n">NeuralCoinBlock</span><span class="p">(</span><span class="s2">&quot;Initial String&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">initial_block</span><span class="o">.</span><span class="n">block_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">initial_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anna sends 2 NC to Mike-Bob sends 4.1 NC to Mike-Initial String
+ac7c14de74c73ddea0bd7d122af9874da86a5900c006a79aaf7dbf0cf9cd38d2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second_block</span> <span class="o">=</span> <span class="n">NeuralCoinBlock</span><span class="p">(</span><span class="n">initial_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">,</span> <span class="p">[</span><span class="n">t3</span><span class="p">,</span> <span class="n">t4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second_block</span><span class="o">.</span><span class="n">block_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mike sends 3.2 NC to Bob-Daniel sends 0.3 NC to Anna-ac7c14de74c73ddea0bd7d122af9874da86a5900c006a79aaf7dbf0cf9cd38d2
+77df85743d58d74d264b295beccb5e77b9ab55e25c136cccf01a092f9900fa2e
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">third_block</span> <span class="o">=</span> <span class="n">NeuralCoinBlock</span><span class="p">(</span><span class="n">second_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">,</span> <span class="p">[</span><span class="n">t5</span><span class="p">,</span> <span class="n">t6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">third_block</span><span class="o">.</span><span class="n">block_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">third_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mike sends 1 NC to Charlie-Mike sends 5.4 NC to Daniel-77df85743d58d74d264b295beccb5e77b9ab55e25c136cccf01a092f9900fa2e
+d72b3e86f9a78b719e5b011d8434f2787fc89cbd4bde3623f77b6b92022c37fa
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
