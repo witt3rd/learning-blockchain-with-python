@@ -41,7 +41,7 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -147,7 +147,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -181,7 +181,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -189,13 +189,31 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#proof-of-work">
-   Proof of Work
+  <a class="reference internal nav-link" href="#what-is-a-blockchain">
+   What is a Blockchain?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#what-is-proof-of-work">
+   What is Proof of Work?
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-proof-of-stake">
+   What is Proof of Stake?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-a-cryptocurrency">
+   What’s a Cryptocurrency?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-ehereum">
+     What is Ehereum?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -205,16 +223,74 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Learning Blockchain with Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-blockchain">
+   What is a Blockchain?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-proof-of-work">
+   What is Proof of Work?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-proof-of-stake">
+   What is Proof of Stake?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-a-cryptocurrency">
+   What’s a Cryptocurrency?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-ehereum">
+     What is Ehereum?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="learning-blockchain-with-python">
 <h1>Learning Blockchain with Python<a class="headerlink" href="#learning-blockchain-with-python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="proof-of-work">
-<h2>Proof of Work<a class="headerlink" href="#proof-of-work" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-a-blockchain">
+<h2>What is a Blockchain?<a class="headerlink" href="#what-is-a-blockchain" title="Permalink to this headline">¶</a></h2>
+<p>A distributed data storage consisting of containers (blocks) which are connected by a chain of cryptographic hashes.</p>
 </div>
-<div class="section" id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-proof-of-work">
+<h2>What is Proof of Work?<a class="headerlink" href="#what-is-proof-of-work" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="what-is-proof-of-stake">
+<h2>What is Proof of Stake?<a class="headerlink" href="#what-is-proof-of-stake" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="what-s-a-cryptocurrency">
+<h2>What’s a Cryptocurrency?<a class="headerlink" href="#what-s-a-cryptocurrency" title="Permalink to this headline">¶</a></h2>
+<p>A digital currency that is based on the blockchain technology.</p>
+<p>If the data you store in a block is a list of transactions, the coins transferred in the transactions form your cryptocurrency.</p>
+<div class="section" id="what-is-ehereum">
+<h3>What is Ehereum?<a class="headerlink" href="#what-is-ehereum" title="Permalink to this headline">¶</a></h3>
+<p>Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third party interference.</p>
+</div>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -242,8 +318,8 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
     <a class='right-next' id="next-link" href="a_basic_blockchain.html" title="next page">
     <div class="prev-next-info">
@@ -253,19 +329,17 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By witt3rd<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By witt3rd<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

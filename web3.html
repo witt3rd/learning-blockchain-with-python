@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Basic Blockchain &#8212; Learning Blockchain with Python</title>
+    <title>&lt;no title&gt; &#8212; Learning Blockchain with Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Learning Blockchain with Python" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -95,9 +94,9 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="a_basic_blockchain.html">
    A Basic Blockchain
   </a>
  </li>
@@ -142,7 +141,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/a_basic_blockchain.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/web3.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -162,7 +161,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/witt3rd/learning-blockchain-with-python/issues/new?title=Issue%20on%20page%20%2Fa_basic_blockchain.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/witt3rd/learning-blockchain-with-python/issues/new?title=Issue%20on%20page%20%2Fweb3.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -183,7 +182,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/witt3rd/learning-blockchain-with-python/main?urlpath=tree/docs/a_basic_blockchain.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/witt3rd/learning-blockchain-with-python/main?urlpath=tree/docs/web3.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -204,27 +203,7 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hashing">
-   Hashing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#blockchain">
-   Blockchain
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transactions">
-   Transactions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-and-chaining-blocks">
-   Creating and Chaining Blocks
-  </a>
- </li>
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
 
             </nav>
@@ -235,7 +214,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>A Basic Blockchain</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -244,27 +223,7 @@
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hashing">
-   Hashing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#blockchain">
-   Blockchain
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transactions">
-   Transactions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-and-chaining-blocks">
-   Creating and Chaining Blocks
-  </a>
- </li>
+                            <ul class="simple visible nav section-nav flex-column">
 </ul>
 
                         </nav>
@@ -274,102 +233,78 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="a-basic-blockchain">
-<h1>A Basic Blockchain<a class="headerlink" href="#a-basic-blockchain" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference external" href="https://youtu.be/pYasYyjByKI">NeuralNine’s ‘Coding A Blockchain in Python’</a></p></li>
-</ul>
-<div class="section" id="hashing">
-<h2>Hashing<a class="headerlink" href="#hashing" title="Permalink to this headline">¶</a></h2>
-<p>TODO: Why is hashing so important?</p>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">web3</span> <span class="kn">import</span> <span class="n">Web3</span>
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="blockchain">
-<h2>Blockchain<a class="headerlink" href="#blockchain" title="Permalink to this headline">¶</a></h2>
-<p>TODO: What is a blockchain?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NeuralCoinBlock</span><span class="p">:</span>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1651</span><span class="o">/</span><span class="mf">4115876539.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">web3</span> <span class="kn">import</span> <span class="n">Web3</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">previous_block_hash</span><span class="p">,</span> <span class="n">transaction_list</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">previous_block_hash</span> <span class="o">=</span> <span class="n">previous_block_hash</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">transaction_list</span> <span class="o">=</span> <span class="n">transaction_list</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">block_data</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">transaction_list</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="n">previous_block_hash</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">block_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">block_data</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;web3&#39;
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="transactions">
-<h2>Transactions<a class="headerlink" href="#transactions" title="Permalink to this headline">¶</a></h2>
-<p>TODO: What are transactions?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="s2">&quot;Anna sends 2 NC to Mike&quot;</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="s2">&quot;Bob sends 4.1 NC to Mike&quot;</span>
-<span class="n">t3</span> <span class="o">=</span> <span class="s2">&quot;Mike sends 3.2 NC to Bob&quot;</span>
-<span class="n">t4</span> <span class="o">=</span> <span class="s2">&quot;Daniel sends 0.3 NC to Anna&quot;</span>
-<span class="n">t5</span> <span class="o">=</span> <span class="s2">&quot;Mike sends 1 NC to Charlie&quot;</span>
-<span class="n">t6</span> <span class="o">=</span> <span class="s2">&quot;Mike sends 5.4 NC to Daniel&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">infura_url</span> <span class="o">=</span> <span class="s2">&quot;https://mainnet.infura.io/v3/e156c60cb1d44b2cb8a57b4512e00ac6&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-and-chaining-blocks">
-<h2>Creating and Chaining Blocks<a class="headerlink" href="#creating-and-chaining-blocks" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">initial_block</span> <span class="o">=</span> <span class="n">NeuralCoinBlock</span><span class="p">(</span><span class="s2">&quot;Initial String&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">initial_block</span><span class="o">.</span><span class="n">block_data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">initial_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">web3</span> <span class="o">=</span> <span class="n">Web3</span><span class="p">(</span><span class="n">Web3</span><span class="o">.</span><span class="n">HTTPProvider</span><span class="p">(</span><span class="n">infura_url</span><span class="p">))</span>
+<span class="n">web3</span><span class="o">.</span><span class="n">isConnected</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anna sends 2 NC to Mike-Bob sends 4.1 NC to Mike-Initial String
-ac7c14de74c73ddea0bd7d122af9874da86a5900c006a79aaf7dbf0cf9cd38d2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second_block</span> <span class="o">=</span> <span class="n">NeuralCoinBlock</span><span class="p">(</span><span class="n">initial_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">,</span> <span class="p">[</span><span class="n">t3</span><span class="p">,</span> <span class="n">t4</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">second_block</span><span class="o">.</span><span class="n">block_data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">second_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">web3</span><span class="o">.</span><span class="n">eth</span><span class="o">.</span><span class="n">blockNumber</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mike sends 3.2 NC to Bob-Daniel sends 0.3 NC to Anna-ac7c14de74c73ddea0bd7d122af9874da86a5900c006a79aaf7dbf0cf9cd38d2
-77df85743d58d74d264b295beccb5e77b9ab55e25c136cccf01a092f9900fa2e
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13698589
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">third_block</span> <span class="o">=</span> <span class="n">NeuralCoinBlock</span><span class="p">(</span><span class="n">second_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">,</span> <span class="p">[</span><span class="n">t5</span><span class="p">,</span> <span class="n">t6</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">third_block</span><span class="o">.</span><span class="n">block_data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">third_block</span><span class="o">.</span><span class="n">block_hash</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">balance</span> <span class="o">=</span> <span class="n">web3</span><span class="o">.</span><span class="n">eth</span><span class="o">.</span><span class="n">getBalance</span><span class="p">(</span><span class="s2">&quot;0x39C7BC5496f4eaaa1fF75d88E079C22f0519E7b9&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mike sends 1 NC to Charlie-Mike sends 5.4 NC to Daniel-77df85743d58d74d264b295beccb5e77b9ab55e25c136cccf01a092f9900fa2e
-d72b3e86f9a78b719e5b011d8434f2787fc89cbd4bde3623f77b6b92022c37fa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1362159211560000
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ether</span> <span class="o">=</span> <span class="n">web3</span><span class="o">.</span><span class="n">fromWei</span><span class="p">(</span><span class="n">balance</span><span class="p">,</span> <span class="s2">&quot;ether&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ether</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00136215921156
+</pre></div>
 </div>
 </div>
 </div>
@@ -398,14 +333,7 @@ d72b3e86f9a78b719e5b011d8434f2787fc89cbd4bde3623f77b6b92022c37fa
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Learning Blockchain with Python</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
